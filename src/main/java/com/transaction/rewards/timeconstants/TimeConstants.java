@@ -1,4 +1,4 @@
-package com.transaction.rewards.TimeConstants;
+package com.transaction.rewards.timeconstants;
 
 public class TimeConstants {
 
