@@ -1,6 +1,6 @@
 package com.transaction.rewards.service;
 
-import com.transaction.rewards.TimeConstants.TimeConstants;
+import com.transaction.rewards.timeconstants.TimeConstants;
 import com.transaction.rewards.entity.Transaction;
 import com.transaction.rewards.model.TransactionRewards;
 import com.transaction.rewards.repository.TransactionRepository;
