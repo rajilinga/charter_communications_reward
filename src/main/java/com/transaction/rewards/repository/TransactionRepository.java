@@ -12,9 +12,5 @@ import java.util.List;
 @Transactional
 public interface TransactionRepository extends CrudRepository<Transaction, Long> {
 
-    public List<Transaction> findAllByCustomerId(Long customerId);
-
     public List<Transaction> findAllByCustomerIdAndTransactionDateBetween(Long customerId, Timestamp from, Timestamp to);
-
-
 }

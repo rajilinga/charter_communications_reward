@@ -28,10 +28,6 @@ public class TransactionController {
 
     @GetMapping(value = "/{customerId}/rewards", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<TransactionRewards> getRewardsByCustomerId(@PathVariable("customerId") Long customerId) {
-        Customer customer = customerRepository.findByCustomerId(customerId);
-        if (customer == null) {
-            throw new RuntimeException("Customer Id  not found");
-        }
         TransactionRewards transactionRewards = transactionService.getTransactionRewardsByCustomerId(customerId);
         return new ResponseEntity<>(transactionRewards, HttpStatus.OK);
     }

@@ -1,5 +1,7 @@
 package com.transaction.rewards.entity;
 
+import lombok.Data;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,6 +11,7 @@ import javax.persistence.Table;
 import java.sql.Timestamp;
 
 @Entity
+@Data
 @Table(name = "TRANSACTION")
 public class Transaction {
 

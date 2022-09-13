@@ -1,5 +1,8 @@
 package com.transaction.rewards.model;
 
+import lombok.Data;
+
+@Data
 public class TransactionRewards {
     private long customerId;
     private long lastMonthRewardPoints;
