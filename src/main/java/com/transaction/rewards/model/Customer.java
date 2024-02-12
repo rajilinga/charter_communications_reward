@@ -1,15 +1,9 @@
-package com.transaction.rewards.entity;
+package com.transaction.rewards.model;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
-@Entity
 @Data
 @Table(name = "CUSTOMER")
 public class Customer {
@@ -18,6 +12,7 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "CUSTOMER_ID")
     private Long customerId;
+
     @Column(name = "CUSTOMER_NAME")
     private String customerName;
 }
