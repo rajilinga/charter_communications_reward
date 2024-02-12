@@ -1,16 +1,10 @@
-package com.transaction.rewards.entity;
+package com.transaction.rewards.model;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import java.sql.Timestamp;
+import javax.persistence.*;
+import java.time.LocalDate;
 
-@Entity
 @Data
 @Table(name = "TRANSACTION")
 public class Transaction {
@@ -24,7 +18,7 @@ public class Transaction {
     private Long customerId;
 
     @Column(name = "TRANSACTION_DATE")
-    private Timestamp transactionDate;
+    private LocalDate transactionDate;
 
     @Column(name = "AMOUNT")
     private double transactionAmount;
@@ -46,11 +40,11 @@ public class Transaction {
         this.customerId = customerId;
     }
 
-    public Timestamp getTransactionDate() {
+    public LocalDate getTransactionDate() {
         return transactionDate;
     }
 
-    public void setTransactionDate(Timestamp transactionDate) {
+    public void setTransactionDate(LocalDate transactionDate) {
         this.transactionDate = transactionDate;
     }
 
